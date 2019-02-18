@@ -1,0 +1,41 @@
+Arguments: 
+  /Users/ardeearam/.nvm/versions/node/v11.6.0/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js start
+
+PATH: 
+  /Users/ardeearam/.nvm/versions/node/v11.6.0/bin:/Users/ardeearam/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Users/ardeearam/Downloads/gradle-4.2.1/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  11.6.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ardeearam/Code/nodejs/arbitrage/package.json: Unexpected string in JSON at position 150
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "arbitrage",
+    "version": "1.0.0",
+    "description": "Arbitrage Bot",
+    "main": "index.js",
+    "author": "Ardee Aram",
+    "license": "MIT"
+    "scripts":{
+  
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

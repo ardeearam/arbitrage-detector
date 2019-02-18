@@ -1,0 +1,15 @@
+{
+  "name": "arbitrage",
+  "version": "1.0.0",
+  "description": "Arbitrage Bot",
+  "main": "index.js",
+  "author": "Ardee Aram",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "binance": "^1.3.3",
+    "node-bitstamp": "^2.2.0"
+  }
+}
