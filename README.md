@@ -9,6 +9,46 @@ This is a simple script that loops over well-known exchanges, and checks if ther
   npm start
 ```
 
+# Output
+
+```
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.03771074}
+binance ethbtc: {"bid":0.037641,"ask":0.037649}
+cex.io ethbtc: {"bid":0.03753,"ask":0.037673}
+
+Buy ETH from binance at 0.037649, Sell ETH to bitstamp at 0.03765358
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037642,"ask":0.03765}
+cex.io ethbtc: {"bid":0.037534,"ask":0.037673}
+
+Buy ETH from binance at 0.03765, Sell ETH to bitstamp at 0.03765358
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037653,"ask":0.037662}
+cex.io ethbtc: {"bid":0.037534,"ask":0.037673}
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037645,"ask":0.03766}
+cex.io ethbtc: {"bid":0.03754,"ask":0.037673}
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037651,"ask":0.037661}
+cex.io ethbtc: {"bid":0.037544,"ask":0.037673}
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037652,"ask":0.037659}
+cex.io ethbtc: {"bid":0.037544,"ask":0.037673}
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037648,"ask":0.037657}
+cex.io ethbtc: {"bid":0.037544,"ask":0.037673}
+
+bitstamp ethbtc: {"bid":0.03765358,"ask":0.0377}
+binance ethbtc: {"bid":0.037648,"ask":0.037657}
+cex.io ethbtc: {"bid":0.037544,"ask":0.037673}
+```
+
 # License
 
 Copyright 2019 Ardee Aram
