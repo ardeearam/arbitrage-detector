@@ -1,0 +1,20 @@
+const CEXIO = require('cexio-api-node');
+const cexio = new CEXIO().rest;
+
+module.exports = {
+
+  prices: async (market) => {
+    return new Promise((fulfilled, rejected) => {
+
+      cexio.ticker('ETH/BTC', (err, data) => {
+        fulfilled({
+          bid: parseFloat(data.bid),
+          ask: parseFloat(data.ask),
+        });
+      });
+    });
+  },
+
+
+  name: _ => { return "cex.io"} 
+}

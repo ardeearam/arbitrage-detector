@@ -1,9 +1,10 @@
 const bitstamp = require('./exchange_apis/bitstamp');
 const binance = require('./exchange_apis/binance');
+const cexio = require('./exchange_apis/cexio');
 
 const {CURRENCY} = require("node-bitstamp");
 
-const exchanges = [bitstamp, binance];
+const exchanges = [bitstamp, binance, cexio];
 
 let start = async _ => {
   for (let exchange of exchanges) {
