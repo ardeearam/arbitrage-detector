@@ -13,6 +13,7 @@
     "cexio-api-node": "^1.2.0",
     "coinbase": "^2.0.8",
     "node-bitstamp": "^2.2.0",
-    "cryptiles": ">=4.1.2"
+    "cryptiles": ">=4.1.2",
+    "lodash": ">=4.17.5"
   }
 }
