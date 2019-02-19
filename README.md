@@ -5,8 +5,8 @@ This is a simple script that loops over well-known exchanges, and checks if ther
 # How to Run
 
 ```
-  yarn install
-  yarn start
+  npm install
+  npm start
 ```
 
 # License
