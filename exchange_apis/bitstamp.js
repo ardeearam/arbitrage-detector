@@ -8,7 +8,6 @@ module.exports = {
       return {
         bid: parseFloat(body.bid),
         ask: parseFloat(body.ask),
-        //last: parseFloat(body.last)
       };
     });
   },
