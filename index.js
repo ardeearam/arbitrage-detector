@@ -5,9 +5,12 @@ const kraken = require('./exchange_apis/kraken');
 const slack = require('./hooks/slack');
 
 const {CURRENCY} = require("node-bitstamp");
+const {Arbitrage} = require('./utils/util');
 
 const exchanges = [bitstamp, binance, cexio, kraken];
 const hooks = [slack];
+
+const arbitrage_threshold = process.env['ARBITRAGE_THRESHOLD'] || 0.05;
 
 let start = async _ => {
 
@@ -31,8 +34,8 @@ let start = async _ => {
 
   for (let [bid_exchange_name, bid] of Object.entries(bids)) {
     for (let [ask_exchange_name, ask] of Object.entries(asks)) {
-      if (bid > ask) {
-        console.log(`Buy ETH from ${ask_exchange_name} at ${ask}, Sell ETH to ${bid_exchange_name} at ${bid}\n`);
+      if (bid > ask && Arbitrage.spread(bid, ask) > arbitrage_threshold ) {
+        console.log(`Buy ETH from ${ask_exchange_name} at ${ask}, Sell ETH to ${bid_exchange_name} at ${bid}. Spread: ${Arbitrage.spread(bid, ask)}\n`);
         for (let hook of hooks) {
           hook.send({bid_exchange_name: bid_exchange_name, ask_exchange_name: ask_exchange_name, bid: bid, ask: ask});
         }
@@ -40,7 +43,7 @@ let start = async _ => {
     }
   }
 
-  setTimeout( _ => {start()}, 180000);
+  setTimeout( _ => {start()}, 1000);
 };
 
 start();
