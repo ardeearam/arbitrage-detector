@@ -2,12 +2,14 @@ const bitstamp = require('./exchange_apis/bitstamp');
 const binance = require('./exchange_apis/binance');
 const cexio = require('./exchange_apis/cexio');
 const kraken = require('./exchange_apis/kraken');
+const coinzip = require('./exchange_apis/coinzip');
 const slack = require('./hooks/slack');
+
 
 const {CURRENCY} = require("node-bitstamp");
 const {Arbitrage} = require('./utils/util');
 
-const exchanges = [bitstamp, binance, cexio, kraken];
+const exchanges = [bitstamp, binance, cexio, kraken, coinzip];
 const hooks = [slack];
 
 const arbitrage_threshold = process.env['ARBITRAGE_THRESHOLD'] || 0.05;
